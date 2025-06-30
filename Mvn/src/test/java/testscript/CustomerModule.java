@@ -19,6 +19,7 @@ public void createCustomer() {
 //		System.setProperty("webdriver.msedge.driver", "./driver/msedgedriver.exe");
 //		System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
 		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.get("https://www.fb.com");
 		Reporter.log(driver.getTitle(),true);
 		driver.quit();
