@@ -20,6 +20,7 @@ public void createCustomer() {
 //		System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://www.fb.com");
 		Reporter.log(driver.getTitle(),true);
 		driver.quit();
