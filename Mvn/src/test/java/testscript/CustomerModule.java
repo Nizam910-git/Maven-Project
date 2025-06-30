@@ -13,12 +13,15 @@ import org.testng.annotations.Test;
 public class CustomerModule {
 	@Test
 public void createCustomer() {
-		Reporter.log("customer has been created",true);
+//		Reporter.log("customer has been created",true);
 		//Download and set the path of driver executable explicitly in sel 3
 //		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 //		System.setProperty("webdriver.msedge.driver", "./driver/msedgedriver.exe");
 //		System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
-//		WebDriver driver=new ChromeDriver();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.fb.com");
+		Reporter.log(driver.getTitle(),true);
+		driver.quit();
 		//Sel 3 uses JSON wire protocol to communicate with the browsers
 		//Sel 4 uses W3C protocol to communicate with the browsers
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
