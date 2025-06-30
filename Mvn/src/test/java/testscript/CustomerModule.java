@@ -23,6 +23,7 @@ public void createCustomer() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://www.fb.com");
 		Reporter.log(driver.getTitle(),true);
+		driver.manage().window().minimize();
 		driver.quit();
 		//Sel 3 uses JSON wire protocol to communicate with the browsers
 		//Sel 4 uses W3C protocol to communicate with the browsers
